@@ -7,9 +7,5 @@
             "name": "Rob Matwiejczyk",
             "email": "rob@liv.it"
         }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.5.9"
-    }
+    ]
 }
