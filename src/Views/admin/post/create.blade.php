@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('build::admin.layout')
 
 @section('styles')
   <link href="/assets/pickadate/themes/default.css" rel="stylesheet">
@@ -24,13 +24,13 @@
           </div>
           <div class="panel-body">
 
-            @include('admin.partials.errors')
+            @include('build::admin.partials.errors')
 
             <form class="form-horizontal" role="form" method="POST"
                   action="{{ route('admin.post.store') }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-              @include('admin.post._form')
+              @include('build::admin.post._form')
 
               <div class="col-md-8">
                 <div class="form-group">

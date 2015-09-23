@@ -10,16 +10,15 @@ get('admin', function () {
   return redirect('/admin/post');
 });
 $router->group([
-    'namespace' => 'Admin',
     'middleware' => 'auth',
 ], function () {
-    resource('admin/post', 'Livit\Build\Controllers\PostController', ['except' => 'show']);
-    resource('admin/tag', 'Livit\Build\Controllers\TagController', ['except' => 'show']);
-    get('admin/upload', 'Livit\Build\Controllers\UploadController@index');
-    post('admin/upload/file', 'Livit\Build\Controllers\UploadController@uploadFile');
-    delete('admin/upload/file', 'Livit\Build\Controllers\UploadController@deleteFile');
-    post('admin/upload/folder', 'Livit\Build\Controllers\UploadController@createFolder');
-    delete('admin/upload/folder', 'Livit\Build\Controllers\UploadController@deleteFolder');
+    resource('admin/post', 'Livit\Build\Controllers\Admin\PostController', ['except' => 'show']);
+    resource('admin/tag', 'Livit\Build\Controllers\Admin\TagController', ['except' => 'show']);
+    get('admin/upload', 'Livit\Build\Controllers\Admin\UploadController@index');
+    post('admin/upload/file', 'Livit\Build\Controllers\Admin\UploadController@uploadFile');
+    delete('admin/upload/file', 'Livit\Build\Controllers\Admin\UploadController@deleteFile');
+    post('admin/upload/folder', 'Livit\Build\Controllers\Admin\UploadController@createFolder');
+    delete('admin/upload/folder', 'Livit\Build\Controllers\Admin\UploadController@deleteFolder');
 });
 
 // Logging in and out

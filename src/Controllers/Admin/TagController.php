@@ -2,13 +2,13 @@
 
 namespace Livit\Build\Controllers\Admin;
 
-use App\Tag;
+use Livit\Build\App\Tag;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Requests\TagCreateRequest;
-use App\Http\Requests\TagUpdateRequest;
+use Livit\Build\Requests;
+use Livit\Build\Requests\TagCreateRequest;
+use Livit\Build\Requests\TagUpdateRequest;
 use App\Http\Controllers\Controller;
 
 class TagController extends Controller

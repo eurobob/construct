@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build;
+namespace Livit\Build\App;
 
 use App\Services\Markdowner;
 use Illuminate\Database\Eloquent\Model;
