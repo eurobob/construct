@@ -1,9 +1,9 @@
 <?php
 
-Route::get('blog', 'Livit\Build\BlogController@index');
-Route::get('blog/{slug}', 'Livit\Build\BlogController@showPost');
-Route::get('contact', 'Livit\Build\ContactController@showForm');
-Route::post('contact', 'Livit\Build\ContactController@sendContactInfo');
+Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
+Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');
+Route::get('contact', 'Livit\Build\Controllers\ContactController@showForm');
+Route::post('contact', 'Livit\Build\Controllers\ContactController@sendContactInfo');
 
 // Admin area
 get('admin', function () {
@@ -13,13 +13,13 @@ $router->group([
     'namespace' => 'Admin',
     'middleware' => 'auth',
 ], function () {
-    resource('admin/post', 'Livit\Build\PostController', ['except' => 'show']);
-    resource('admin/tag', 'Livit\Build\TagController', ['except' => 'show']);
-    get('admin/upload', 'Livit\Build\UploadController@index');
-    post('admin/upload/file', 'Livit\Build\UploadController@uploadFile');
-    delete('admin/upload/file', 'Livit\Build\UploadController@deleteFile');
-    post('admin/upload/folder', 'Livit\Build\UploadController@createFolder');
-    delete('admin/upload/folder', 'Livit\Build\UploadController@deleteFolder');
+    resource('admin/post', 'Livit\Build\Controllers\PostController', ['except' => 'show']);
+    resource('admin/tag', 'Livit\Build\Controllers\TagController', ['except' => 'show']);
+    get('admin/upload', 'Livit\Build\Controllers\UploadController@index');
+    post('admin/upload/file', 'Livit\Build\Controllers\UploadController@uploadFile');
+    delete('admin/upload/file', 'Livit\Build\Controllers\UploadController@deleteFile');
+    post('admin/upload/folder', 'Livit\Build\Controllers\UploadController@createFolder');
+    delete('admin/upload/folder', 'Livit\Build\Controllers\UploadController@deleteFolder');
 });
 
 // Logging in and out

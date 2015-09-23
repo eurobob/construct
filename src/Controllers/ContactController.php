@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Livit\Build\Controllers;
 
-use App\Http\Requests\ContactMeRequest;
+use App\Http\Controllers\Controller;
+use Livit\Build\Requests\ContactMeRequest;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -15,7 +16,7 @@ class ContactController extends Controller
 
     public function showForm()
     {
-        return view('blog.contact');
+        return view('livit/build/blog.contact');
     }
 
     /**
