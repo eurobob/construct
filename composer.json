@@ -1,0 +1,13 @@
+{
+    "name": "livit/build",
+    "description": "Livit CMS",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rob Matwiejczyk",
+            "email": "rob@liv.it"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
