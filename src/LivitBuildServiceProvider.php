@@ -17,7 +17,7 @@ class LivitBuildServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/Views' => base_path('resources/views/livit/build'),
-        ], 'views');
+        ]);
 
         include __DIR__.'/routes.php';
     }
