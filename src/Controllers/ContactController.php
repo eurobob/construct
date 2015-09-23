@@ -16,7 +16,7 @@ class ContactController extends Controller
 
     public function showForm()
     {
-        return view('livit/build/blog.contact');
+        return view('build::blog.contact');
     }
 
     /**

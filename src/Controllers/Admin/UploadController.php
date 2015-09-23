@@ -25,7 +25,7 @@ class UploadController extends Controller
     $folder = $request->get('folder');
     $data = $this->manager->folderInfo($folder);
 
-    return view('livit/build/admin.upload.index', $data);
+    return view('build::admin.upload.index', $data);
   }
 
   /**

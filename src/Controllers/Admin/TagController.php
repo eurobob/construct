@@ -32,7 +32,7 @@ class TagController extends Controller
     {
         $tags = Tag::all();
 
-        return view('livit/build/admin.tag.index')
+        return view('build::admin.tag.index')
             ->withTags($tags);
     }
 
@@ -48,7 +48,7 @@ class TagController extends Controller
             $data[$field] = old($field, $default);
         }
 
-        return view('livit/build/admin.tag.create', $data);
+        return view('build::admin.tag.create', $data);
     }
 
     /**
@@ -83,7 +83,7 @@ class TagController extends Controller
             $data[$field] = old($field, $tag->$field);
         }
 
-        return view('livit/build/admin.tag.edit', $data);
+        return view('build::admin.tag.edit', $data);
     }
 
     /**

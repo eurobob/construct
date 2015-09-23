@@ -17,7 +17,7 @@ class BlogController extends Controller
         $data = $this->dispatch(new BlogIndexData($tag));
         $layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
 
-    	return view('livit/build/' . $layout, $data);
+    	return view('build::' . $layout, $data);
     }
 
     public function showPost($slug, Request $request)
@@ -28,6 +28,6 @@ class BlogController extends Controller
             $tag = Tag::whereTag($tag)->firstOrFail();
         }
 
-    	return view('livit/build/' . $post->layout, compact('post', 'tag'));
+    	return view('build::' . $post->layout, compact('post', 'tag'));
     }
 }

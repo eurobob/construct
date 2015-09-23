@@ -23,6 +23,6 @@ $router->group([
 });
 
 // Logging in and out
-get('/auth/login', 'Auth\AuthController@getLogin');
-post('/auth/login', 'Auth\AuthController@postLogin');
-get('/auth/logout', 'Auth\AuthController@getLogout');
+get('/auth/login', 'Livit\Build\Controllers\Auth\AuthController@getLogin');
+post('/auth/login', 'Livit\Build\Controllers\Auth\AuthController@postLogin');
+get('/auth/logout', 'Livit\Build\Controllers\Auth\AuthController@getLogout');
