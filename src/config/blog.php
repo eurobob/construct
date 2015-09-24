@@ -10,5 +10,5 @@ return [
         'storage' => 's3',
         'webpath' => 'https://s3-us-west-2.amazonaws.com/learntech',
     ],
-    'contact_email' => 'rob@liv.it',
+    'contact_email' => 'rob@liv.it', 
 ];
