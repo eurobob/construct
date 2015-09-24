@@ -26,6 +26,7 @@ class LivitBuildServiceProvider extends ServiceProvider
             __DIR__.'/Views' => base_path('resources/views/livit/build'),
             __DIR__.'/config/blog.php' => config_path('blog.php'),
             __DIR__.'/config/mail.php' => config_path('mail.php'),
+            __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
             __DIR__.'/database/migrations' => $this->app->databasePath().'/migrations',
         ]);
 
