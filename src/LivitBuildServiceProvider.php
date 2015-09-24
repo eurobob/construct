@@ -23,7 +23,7 @@ class LivitBuildServiceProvider extends ServiceProvider
         ]);
 
         $this->publishes([
-            '/package.json' => base_path(),
+            __DIR__.'/config/blog.php' => config_path('blog.php'),
         ]);
 
         include __DIR__.'/routes.php';

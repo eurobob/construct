@@ -2,7 +2,7 @@
 
 namespace Livit\Build\App;
 
-use App\Services\Markdowner;
+use Livit\Build\Services\Markdowner;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 

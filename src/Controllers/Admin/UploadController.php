@@ -2,10 +2,10 @@
 namespace Livit\Build\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Services\UploadsManager;
+use Livit\Build\Services\UploadsManager;
 use Illuminate\Http\Request;
-use App\Http\Requests\UploadFileRequest;
-use App\Http\Requests\UploadNewFolderRequest;
+use Livit\Build\Requests\UploadFileRequest;
+use Livit\Build\Requests\UploadNewFolderRequest;
 use Illuminate\Support\Facades\File;
 
 class UploadController extends Controller

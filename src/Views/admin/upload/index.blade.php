@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('build::admin.layout')
 
 @section('content')
   <div class="container-fluid">
@@ -31,8 +31,8 @@
     <div class="row">
       <div class="col-sm-12">
 
-        @include('admin.partials.errors')
-        @include('admin.partials.success')
+        @include('build::admin.partials.errors')
+        @include('build::admin.partials.success')
 
         <table id="uploads-table" class="table table-striped table-bordered">
           <thead>
@@ -108,7 +108,7 @@
     </div>
   </div>
 
-  @include('admin.upload._modals')
+  @include('build::admin.upload._modals')
 
 @stop
 
