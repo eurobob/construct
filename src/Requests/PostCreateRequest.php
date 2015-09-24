@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Livit\Build\Requests;
 
 use Carbon\Carbon;
 

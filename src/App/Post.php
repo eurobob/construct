@@ -22,7 +22,7 @@ class Post extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'post_tag_pivot');
+        return $this->belongsToMany('Livit\Build\App\Tag', 'post_tag_pivot');
     }
 
     /**

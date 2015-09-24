@@ -19,6 +19,10 @@ class LivitBuildServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/Views', 'build');
 
         $this->publishes([
+            __DIR__.'/Views' => base_path('resources/views/livit/build'),
+        ]);
+
+        $this->publishes([
             '/package.json' => base_path(),
         ]);
 

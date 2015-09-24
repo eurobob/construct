@@ -20,12 +20,12 @@
   <![endif]-->
 </head>
 <body>
-@include('blog.partials.page-nav')
+@include('build::blog.partials.page-nav')
 
 @yield('page-header')
 @yield('content')
 
-@include('blog.partials.page-footer')
+@include('build::blog.partials.page-footer')
 
 {{-- Scripts --}}
 <script src="/assets/js/blog.js"></script>

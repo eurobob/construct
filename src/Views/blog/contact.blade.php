@@ -1,4 +1,4 @@
-@extends('blog.layouts.master', ['meta_description' => 'Contact Form'])
+@extends('build::blog.layouts.master', ['meta_description' => 'Contact Form'])
 
 @section('page-header')
   <header class="intro-header"
@@ -23,8 +23,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        @include('admin.partials.errors')
-        @include('admin.partials.success')
+        @include('build::admin.partials.errors')
+        @include('build::admin.partials.success')
         <p>
           Want to get in touch with me? Fill out the form below to send me a
           message and I will try to get back to you within 24 hours!

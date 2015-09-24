@@ -2,7 +2,7 @@
 
 namespace Livit\Build\Controllers\Admin;
 
-use App\Jobs\PostFormFields;
+use Livit\Build\App\Jobs\PostFormFields;
 use Livit\Build\Requests;
 use Livit\Build\Requests\PostCreateRequest;
 use Livit\Build\Requests\PostUpdateRequest;

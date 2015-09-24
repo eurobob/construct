@@ -4,6 +4,7 @@ namespace Livit\Build\App\Jobs;
 
 use Livit\Build\App\Post;
 use Livit\Build\App\Tag;
+use App\Jobs\Job;
 use Carbon\Carbon;
 use Illuminate\Contracts\Bus\SelfHandling;
 

@@ -26,6 +26,20 @@ class AuthController extends Controller
     protected $redirectTo = '/admin/post';
 
     /**
+     * Show the application login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLogin()
+    {
+        if (view()->exists('build::auth.authenticate')) {
+            return view('build::auth.authenticate');
+        }
+
+        return view('build::auth.login');
+    }
+
+    /**
      * Create a new authentication controller instance.
      *
      * @return void

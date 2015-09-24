@@ -1,4 +1,4 @@
-@extends('blog.layouts.master')
+@extends('build::blog.layouts.master')
 
 @section('page-header')
   <header class="intro-header"
