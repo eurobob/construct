@@ -19,6 +19,8 @@ class LivitBuildServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views', 'build');
 
         $this->publishes([
+            __DIR__.'/app.scss' => base_path('resources/assets/sass/app.scss'),
+            __DIR__.'/_settings.scss' => base_path('resources/assets/sass/_settings.scss'),
             __DIR__.'/bower.json' => base_path('bower.json'),
             __DIR__.'/.bowerrc' => base_path('.bowerrc'),
             __DIR__.'/package.json' => base_path('package.json'),
@@ -28,6 +30,10 @@ class LivitBuildServiceProvider extends ServiceProvider
             __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
             __DIR__.'/database/migrations' => $this->app->databasePath().'/migrations',
         ]);
+
+        $this->publishes([
+            __DIR__.'/assets' => base_path('resources/assets/vendor/build'),
+        ], 'publish');
 
         include __DIR__.'/routes.php';
     }

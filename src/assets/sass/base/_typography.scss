@@ -1,0 +1,183 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/* @TODO tidy this shit */
+
+
+.zetta,
+%zetta {
+    @include font-size($kilo-size);
+
+    @media screen and (min-width: 640px) {
+        @include font-size($giga-size);
+    }
+
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($peta-size);
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($zetta-size);
+    }
+}
+
+.exa,
+%exa {
+    @include font-size($giga-size);
+
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($peta-size);
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($exa-size);
+    }
+}
+
+.peta,
+%peta {
+    @include font-size($kilo-size);
+
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($giga-size);
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($peta-size);
+    }
+}
+
+.tera,
+%tera {
+    @include font-size($kilo-size);
+
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($giga-size);
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($tera-size);
+    }
+}
+
+.giga,
+%giga {
+    @include font-size($kilo-size);
+
+    @media screen and (min-width: $type-vw-start) {
+    @include font-size($mega-size);
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+    @include font-size($giga-size);
+    }
+  
+}
+
+.mega,
+%mega {
+    @include font-size(3.5);
+    
+    @media screen and (min-width: 450px) {
+      @include font-size($h2-size);
+    }
+    
+    @media screen and (min-width: 640px) {
+      @include font-size($h1-size);
+    }
+    
+    @media screen and (min-width: 900px) {
+      @include font-size($kilo-size);
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+      @include font-size($mega-size);
+    }
+}
+
+.kilo,
+%kilo {
+    @include font-size($h2-size);
+    
+    @media screen and (min-width: $type-vw-start) {
+      @include font-size($kilo-size);
+    }
+}
+
+.hecto,
+%hecto {
+    @include font-size($h2-size);
+    
+    @media screen and (min-width: $type-vw-start) {
+      @include font-size($hecto-size);
+    }
+}
+
+h1, 
+.alpha,
+%alpha {
+    @include font-size($h3-size);
+  
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($h2-size);
+    }
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($h1-size);
+    }
+}
+
+h2, 
+.beta,
+%beta {
+    @include font-size($h4-size);
+    
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($h3-size);
+    }
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($h2-size);
+    }
+}
+
+h3, 
+.gamma,
+%gamma {
+    @include font-size($h5-size);
+    
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($h4-size);
+    }
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($h3-size);
+    }
+}
+
+h4, 
+.delta,
+%delta {
+    @include font-size($h6-size);
+    
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($h5-size);
+    }
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size($h4-size);
+    }
+}
+
+h5, 
+.epsilon,
+%epsilon {
+    @include font-size($h6-size);
+
+    @media screen and (min-width: $type-vw-start) {
+        @include font-size($h5-size);
+    }
+}
+
+h6, 
+.zeta,
+%zeta {
+    @include font-size($h6-size);
+}

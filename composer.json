@@ -22,6 +22,6 @@
         "gulp copyfiles"
     ],
     "post-update-cmd": [
-        "php artisan vendor:publish --force"
+        "php artisan vendor:publish --tag=publish --force"
     ]
 }

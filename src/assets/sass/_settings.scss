@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #DEFAULTS
+\*------------------------------------*/
+
+/*These variables are inuitcss’ defaults; they should not be modified or
+adjusted directly; you should predefine the variables in your own project.*/
+
+/*High-level base settings.*/
+
+$base-font-size:          16px !default;
+$base-line-height:        24px !default;
+$base-text-color:         #333 !default;
+$base-background-color:   #fff !default;
+
+/*These variables are framework variables, sourced from variables defined
+above. Feel free to use these variables throughout your project, but do not
+modify or reassign them.*/
+
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--tiny:     round($base-spacing-unit / 4);
+$base-spacing-unit--small:    round($base-spacing-unit / 2);
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+$base-spacing-unit--huge:     round($base-spacing-unit * 4);
+
+
+/* Modular typography scale (http://www.modularscale.com/?1&em&1.618,1.333&web&text) */
+
+$zetta-size: 17.713 !default; 
+$exa-size: 13.288 !default;
+$peta-size: 11.089 !default;
+$tera-size: 9.969 !default;
+$giga-size: 7.478 !default;
+$mega-size: 6.854 !default;
+$kilo-size: 5.61 !default;
+$hecto-size: 4.236 !default;
+$h1-size: 4.209 !default;
+$h2-size: 3.157 !default;
+$h3-size: 2.618 !default;
+$h4-size: 1.777 !default;
+$h5-size: 1.333 !default;
+$h6-size: 1 !default;
+
+/* Use viewport units to maintain line length when text is fluid. Based on helvetica.
+
+@TODO define function based on max container width and define vw font sizes */
+
+$type-vw-start: 760px !default;
+$type-vw-end: 1220px !default;
