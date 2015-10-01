@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\App;
+namespace Livit\Build;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class Tag extends Model
        */
       public function posts()
       {
-        return $this->belongsToMany('Livit\Build\App\Post', 'post_tag_pivot');
+        return $this->belongsToMany('Livit\Build\Post', 'post_tag_pivot');
       }
 
       /**

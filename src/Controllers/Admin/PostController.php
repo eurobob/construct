@@ -2,12 +2,12 @@
 
 namespace Livit\Build\Controllers\Admin;
 
-use Livit\Build\App\Jobs\PostFormFields;
+use Livit\Build\Jobs\PostFormFields;
 use Livit\Build\Requests;
 use Livit\Build\Requests\PostCreateRequest;
 use Livit\Build\Requests\PostUpdateRequest;
 use App\Http\Controllers\Controller;
-use Livit\Build\App\Post;
+use Livit\Build\Post;
 
 class PostController extends Controller
 {

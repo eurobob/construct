@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\App;
+namespace Livit\Build;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

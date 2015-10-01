@@ -1,9 +1,9 @@
 <?php
 
-namespace Livit\Build\App\Jobs;
+namespace Livit\Build\Jobs;
 
-use Livit\Build\App\Post;
-use Livit\Build\App\Tag;
+use Livit\Build\Post;
+use Livit\Build\Tag;
 use App\Jobs\Job;
 use Carbon\Carbon;
 use Illuminate\Contracts\Bus\SelfHandling;

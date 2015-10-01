@@ -2,7 +2,7 @@
 
 namespace Livit\Build\Controllers\Admin;
 
-use Livit\Build\App\Tag;
+use Livit\Build\Tag;
 
 use Illuminate\Http\Request;
 

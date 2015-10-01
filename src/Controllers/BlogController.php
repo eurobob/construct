@@ -3,10 +3,10 @@
 namespace Livit\Build\Controllers;
 
 use App\Http\Controllers\Controller;
-use Livit\Build\App\Jobs\BlogIndexData;
+use Livit\Build\Jobs\BlogIndexData;
 use Livit\Build\Requests;
-use Livit\Build\App\Post;
-use Livit\Build\App\Tag;
+use Livit\Build\Post;
+use Livit\Build\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
