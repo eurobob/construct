@@ -10,6 +10,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('build::home.index');
+        return view('build::pages.home.index');
     }
 }

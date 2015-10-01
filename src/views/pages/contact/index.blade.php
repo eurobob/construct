@@ -1,4 +1,4 @@
-@extends('build::blog.layouts.master', ['meta_description' => 'Contact Form'])
+@extends('build::layouts.master', ['meta_description' => 'Contact Form'])
 
 @section('page-header')
   <header class="intro-header"
