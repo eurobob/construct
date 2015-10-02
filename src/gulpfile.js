@@ -58,6 +58,10 @@ elixir(function(mix) {
 
     BrowserSync.init();
 
+    mix.BrowserSync({
+        proxy: "learntech.app"
+    });
+
     mix.scripts([
         'js/jquery.js',
         'js/jquery.dataTables.js',
@@ -67,8 +71,5 @@ elixir(function(mix) {
     'resources/assets'
     );
 
-    mix.sass('app.scss', 'public/assets/css/app.css')
-        .BrowserSync({
-            proxy: 'learntech.app'
-        });
+    mix.sass('app.scss', 'public/assets/css/app.css');
 });

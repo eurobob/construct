@@ -28,7 +28,7 @@
 @include('build::includes.partials.page-footer')
 
 {{-- Scripts --}}
-<script src="/assets/js/blog.js"></script>
+<!-- <script src="/assets/js/blog.js"></script> -->
 @yield('scripts')
 
 </body>

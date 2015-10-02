@@ -2,75 +2,78 @@
     #TYPOGRAPHY
 \*------------------------------------*/
 
-/* @TODO tidy this shit */
+/* @TODO tidy this shit and fix line-heights */
 
+h1, h2, h3, h4, h5, h6 {
+    color: $base-heading-color;
+}
 
 .zetta,
 %zetta {
-    @include font-size($kilo-size);
+    @include font-size($kilo-size, 1.333);
 
     @media screen and (min-width: 640px) {
-        @include font-size($giga-size);
+        @include font-size($giga-size, 1.333);
     }
 
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($peta-size);
+        @include font-size($peta-size, 1.618);
     }
 
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($zetta-size);
+        @include font-size($zetta-size, 1.333);
     }
 }
 
 .exa,
 %exa {
-    @include font-size($giga-size);
+    @include font-size($giga-size, 1.333);
 
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($peta-size);
+        @include font-size($peta-size, 1.618);
     }
 
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($exa-size);
+        @include font-size($exa-size, 1.333);
     }
 }
 
 .peta,
 %peta {
-    @include font-size($kilo-size);
+    @include font-size($kilo-size, 1.333);
 
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($giga-size);
+        @include font-size($giga-size, 1.333);
     }
 
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($peta-size);
+        @include font-size($peta-size, 1.618);
     }
 }
 
 .tera,
 %tera {
-    @include font-size($kilo-size);
+    @include font-size($kilo-size, 1.333);
 
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($giga-size);
+        @include font-size($giga-size, 1.333);
     }
 
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($tera-size);
+        @include font-size($tera-size, 1.333);
     }
 }
 
 .giga,
 %giga {
-    @include font-size($kilo-size);
+    @include font-size($kilo-size, 1.333);
 
     @media screen and (min-width: $type-vw-start) {
-    @include font-size($mega-size);
+    @include font-size($mega-size, 1.618);
     }
 
     @media screen and (min-width: $type-vw-end) {
-    @include font-size($giga-size);
+    @include font-size($giga-size, 1.333);
     }
   
 }
@@ -80,104 +83,125 @@
     @include font-size(3.5);
     
     @media screen and (min-width: 450px) {
-      @include font-size($h2-size);
+      @include font-size($h2-size, 1.2);
     }
     
     @media screen and (min-width: 640px) {
-      @include font-size($h1-size);
+      @include font-size($h1-size, 1.1);
     }
     
     @media screen and (min-width: 900px) {
-      @include font-size($kilo-size);
+      @include font-size($kilo-size, 1.333);
     }
 
     @media screen and (min-width: $type-vw-end) {
-      @include font-size($mega-size);
+      @include font-size($mega-size, 1.618);
     }
 }
 
 .kilo,
 %kilo {
-    @include font-size($h2-size);
+    @include font-size($h2-size, 1.2);
     
     @media screen and (min-width: $type-vw-start) {
-      @include font-size($kilo-size);
+      @include font-size($kilo-size, 1.333);
     }
 }
 
 .hecto,
 %hecto {
-    @include font-size($h2-size);
+    @include font-size($h2-size, 1.2);
     
     @media screen and (min-width: $type-vw-start) {
-      @include font-size($hecto-size);
+      @include font-size($hecto-size, 1.618);
     }
 }
 
 h1, 
 .alpha,
 %alpha {
-    @include font-size($h3-size);
+    @include font-size($h3-size, 1.1);
   
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($h2-size);
+        @include font-size($h2-size, 1.1);
     }
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($h1-size);
+        @include font-size($h1-size, 1.1);
     }
 }
 
 h2, 
 .beta,
 %beta {
-    @include font-size($h4-size);
+    @include font-size($h4-size, 1.333);
     
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($h3-size);
+        @include font-size($h3-size, 1.333);
     }
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($h2-size);
+        @include font-size($h2-size, 1.2);
     }
 }
 
 h3, 
 .gamma,
 %gamma {
-    @include font-size($h5-size);
+    @include font-size($h5-size, 1.333);
     
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($h4-size);
+        @include font-size($h4-size, 1.333);
     }
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($h3-size);
+        @include font-size($h3-size, 1.333);
     }
 }
 
 h4, 
 .delta,
 %delta {
-    @include font-size($h6-size);
+    @include font-size($h6-size, 1.333);
     
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($h5-size);
+        @include font-size($h5-size, 1.333);
     }
     @media screen and (min-width: $type-vw-end) {
-        @include font-size($h4-size);
+        @include font-size($h4-size, 1.333);
     }
 }
 
 h5, 
 .epsilon,
 %epsilon {
-    @include font-size($h6-size);
+    @include font-size($h6-size, 1.333);
 
     @media screen and (min-width: $type-vw-start) {
-        @include font-size($h5-size);
+        @include font-size($h5-size, 1.333);
     }
 }
 
 h6, 
 .zeta,
 %zeta {
-    @include font-size($h6-size);
+    @include font-size($h6-size, 1.333);
 }
+
+p,
+ul,
+ol,
+dl {
+    @media screen and (min-width: $type-vw-start) {
+        font-size: $vw-p * 1vw;
+    }
+
+    @media screen and (min-width: $type-vw-end) {
+        @include font-size( ($vw-p * 10 / ($base-font-size / 1px)), 1.5 );
+    }
+
+    
+}
+
+/*html {
+    @media screen and (min-width: $type-vw-end) {
+        font-size: 150%;
+    }
+}*/

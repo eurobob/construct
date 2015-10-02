@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <main>
+    <main class="c-content">
 
       <h1>This is the primary heading and there should only be one of these per page</h1>
         <p>A small paragraph to <em>emphasis</em> and show <strong>important</strong> bits.</p>

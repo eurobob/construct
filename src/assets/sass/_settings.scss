@@ -9,8 +9,10 @@ adjusted directly; you should predefine the variables in your own project.*/
 
 $base-font-size:          16px !default;
 $base-line-height:        24px !default;
-$base-text-color:         #333 !default;
+$base-text-color:         #555 !default;
+$base-heading-color:      #333 !default;
 $base-background-color:   #fff !default;
+$max-container-width: 1000px !default;
 
 /*These variables are framework variables, sourced from variables defined
 above. Feel free to use these variables throughout your project, but do not
@@ -23,26 +25,27 @@ $base-spacing-unit--large:    round($base-spacing-unit * 2);
 $base-spacing-unit--huge:     round($base-spacing-unit * 4);
 
 
-/* Modular typography scale (http://www.modularscale.com/?1&em&1.618,1.333&web&text) */
 
-$zetta-size: 17.713 !default; 
-$exa-size: 13.288 !default;
+/* Modular rem-based typography scale (http://www.modularscale.com/?1&em&1.618,1.333&web&text) */
+
+$zetta-size: 17.713 !default; /* 1.333 */
+$exa-size: 13.288 !default; /* 1.333 */
 $peta-size: 11.089 !default;
-$tera-size: 9.969 !default;
-$giga-size: 7.478 !default;
+$tera-size: 9.969 !default; /* 1.333 */
+$giga-size: 7.478 !default; /* 1.333 */
 $mega-size: 6.854 !default;
-$kilo-size: 5.61 !default;
+$kilo-size: 5.61 !default; /* 1.333 */
 $hecto-size: 4.236 !default;
-$h1-size: 4.209 !default;
-$h2-size: 3.157 !default;
+$h1-size: 4.209 !default; /* 1.333 */
+$h2-size: 3.157 !default; /* 1.333 */
 $h3-size: 2.618 !default;
-$h4-size: 1.777 !default;
-$h5-size: 1.333 !default;
+$h4-size: 1.777 !default; /* 1.333 */
+$h5-size: 1.333 !default; /* 1.333 */
 $h6-size: 1 !default;
 
 /* Use viewport units to maintain line length when text is fluid. Based on helvetica.
 
 @TODO define function based on max container width and define vw font sizes */
-
-$type-vw-start: 760px !default;
-$type-vw-end: 1220px !default;
+$vw-p: 2.4 !default;
+$type-vw-start: ($base-font-size / $vw-p * 100) !default;
+$type-vw-end: $max-container-width !default;
