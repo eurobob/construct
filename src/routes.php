@@ -13,6 +13,7 @@ get('admin', function () {
 $router->group([
     'middleware' => 'auth',
 ], function () {
+    resource('admin/sink', 'Livit\Build\Controllers\Admin\SinkController');
     resource('admin/post', 'Livit\Build\Controllers\Admin\PostController', ['except' => 'show']);
     resource('admin/tag', 'Livit\Build\Controllers\Admin\TagController', ['except' => 'show']);
     get('admin/upload', 'Livit\Build\Controllers\Admin\UploadController@index');
