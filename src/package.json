@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "gulp": "^3.8.8",
-    "laravel-elixir-browsersync2": "^0.1.0"
+    "laravel-elixir-browser-sync-simple": "^2.1.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
