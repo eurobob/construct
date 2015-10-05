@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
-var BrowserSync = require('laravel-elixir-browsersync-simple');
+var BrowserSync = require('laravel-elixir-browser-sync-simple');
 
 /*
  |--------------------------------------------------------------------------
