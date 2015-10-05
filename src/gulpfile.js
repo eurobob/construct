@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
-var BrowserSync = require('laravel-elixir-browsersync2');
+var BrowserSync = require('laravel-elixir-browsersync-simple');
 
 /*
  |--------------------------------------------------------------------------
@@ -56,11 +56,6 @@ var BrowserSync = require('laravel-elixir-browsersync2');
 
 elixir(function(mix) {
 
-    BrowserSync.init();
-
-    mix.BrowserSync({
-        proxy: "learntech.app"
-    });
 
     mix.scripts([
         'js/jquery.js',
@@ -71,5 +66,14 @@ elixir(function(mix) {
     'resources/assets'
     );
 
-    mix.sass('app.scss', 'public/assets/css/app.css');
+    mix.sass('app.scss', 'public/assets/css/app.css')
+        .browserSync({
+            proxy: "learntech.app",
+            files: [
+                "app/**/*",
+                "public/**/*",
+                "resources/views/**/*",
+                "vendor/**/*"
+            ]
+        });
 });
