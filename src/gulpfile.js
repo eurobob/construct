@@ -3,6 +3,7 @@ var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
 var BrowserSync = require('laravel-elixir-browser-sync-simple');
 require('laravel-elixir-imagemin');
+require('laravel-elixir-modernizr');
 
 /*
  |--------------------------------------------------------------------------
@@ -68,6 +69,13 @@ elixir(function(mix) {
     );
 
     mix.sass('app.scss', 'public/assets/css/app.css')
+        .imagemin("resources/assets/images", "public/assets/images/")
+        .modernizr([
+                "public/assets/css/**/*.css",
+                "public/assets/js/**/*.js"
+            ],
+            "public/assets/js/vendor/modernizr-custom.js"
+        )
         .browserSync({
             proxy: "learntech.app",
             files: [
@@ -77,6 +85,4 @@ elixir(function(mix) {
                 "vendor/**/*"
             ]
         });
-
-    mix.imagemin("resources/assets/images", "public/assets/images/");
 });
