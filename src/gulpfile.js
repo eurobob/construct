@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
 var BrowserSync = require('laravel-elixir-browser-sync-simple');
+require('laravel-elixir-imagemin');
 
 /*
  |--------------------------------------------------------------------------
@@ -76,4 +77,6 @@ elixir(function(mix) {
                 "vendor/**/*"
             ]
         });
+
+    mix.imagemin("resources/assets/images", "public/assets/images/");
 });
