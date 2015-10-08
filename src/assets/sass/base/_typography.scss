@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
     @include font-size($h2-size, 1.2);
     
     @media screen and (min-width: $type-vw-start) {
-      @include font-size($hecto-size, 1.618);
+      @include font-size($hecto-size, 1.2);
     }
 }
 
