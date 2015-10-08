@@ -49,3 +49,5 @@ $h6-size: 1 !default;
 $vw-p: 2.4 !default;
 $type-vw-start: ($base-font-size / $vw-p * 100) !default;
 $type-vw-end: $max-container-width !default;
+
+$old-ie: false !default;

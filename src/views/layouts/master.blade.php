@@ -10,7 +10,12 @@
   <title>{{ $title or config('blog.title') }}</title>
 
   {{-- Styles --}}
-  <link href="/assets/css/app.css" rel="stylesheet">
+  <!--[if lte IE 8]>
+      <link href="{{ URL::asset('assets/css/ie.css') }}" rel="stylesheet">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link href="{{ URL::asset('assets/css/app.css') }}" rel="stylesheet">
+  <!--<![endif]-->
   @yield('styles')
 
   {{-- HTML5 Shim and Respond.js for IE8 support --}}
@@ -28,7 +33,7 @@
 @include('build::includes.partials.page-footer')
 
 {{-- Scripts --}}
-<!-- <script src="/assets/js/blog.js"></script> -->
+<script src="{{ URL::asset('assets/js/vendor/modernizr-custom.js') }}"></script>
 @yield('scripts')
 
 </body>

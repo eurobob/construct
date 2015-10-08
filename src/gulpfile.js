@@ -69,12 +69,22 @@ elixir(function(mix) {
     );
 
     mix.sass('app.scss', 'public/assets/css/app.css')
+        .sass('ie.scss', 'public/assets/css/ie.css')
         .imagemin("resources/assets/images", "public/assets/images/")
         .modernizr([
-                "public/assets/css/**/*.css",
+                "resources/views/**/*.php",
+                "public/assets/css/app.css",
                 "public/assets/js/**/*.js"
             ],
-            "public/assets/js/vendor/modernizr-custom.js"
+            "public/assets/js/vendor/modernizr-custom.js",
+            {
+                "options": [
+                    "setClasses",
+                    "addTest",
+                    "testProp",
+                    "fnBind"
+                ]
+            }
         )
         .browserSync({
             proxy: "learntech.app",

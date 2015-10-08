@@ -61,3 +61,17 @@ This will yield:
     }
 
 }
+
+@mixin old-ie {
+    @if $old-ie {
+        @content;
+    }
+}
+
+@mixin background-cover {
+    background-size: cover;
+    
+    @include old-ie {
+        -ms-behavior: url(../vendor/build/behaviors/backgroundsize.min.htc);
+    }
+}
