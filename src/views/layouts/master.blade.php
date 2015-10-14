@@ -11,10 +11,10 @@
 
   {{-- Styles --}}
   <!--[if lte IE 8]>
-      <link href="{{ URL::asset('assets/css/ie.css') }}" rel="stylesheet">
+      <link href="{{ elixir('assets/css/ie.css') }}" rel="stylesheet">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-      <link href="{{ URL::asset('assets/css/app.css') }}" rel="stylesheet">
+      <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
   <!--<![endif]-->
   @yield('styles')
 
@@ -33,7 +33,19 @@
 @include('build::includes.partials.page-footer')
 
 {{-- Scripts --}}
-<script src="{{ URL::asset('assets/js/vendor/modernizr-custom.js') }}"></script>
+<script src="{{ elixir('assets/js/vendor/modernizr-custom.js') }}"></script>
+<?php if (env('GOOGLE_ANALYTICS')): ?>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', <?php echo "'" . env('GOOGLE_ANALYTICS') . "'" ?>, 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<?php endif; ?>
 @yield('scripts')
 
 </body>

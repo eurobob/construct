@@ -25,6 +25,7 @@ class LivitBuildServiceProvider extends ServiceProvider
             __DIR__.'/.bowerrc' => base_path('.bowerrc'),
             __DIR__.'/package.json' => base_path('package.json'),
             __DIR__.'/gulpfile.js' => base_path('gulpfile.js'),
+            __DIR__.'/settings.js' => base_path('settings.js'),
             __DIR__.'/config/blog.php' => config_path('blog.php'),
             __DIR__.'/config/mail.php' => config_path('mail.php'),
             __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
