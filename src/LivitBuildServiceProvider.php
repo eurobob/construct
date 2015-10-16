@@ -20,6 +20,7 @@ class LivitBuildServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/app.scss' => base_path('resources/assets/sass/app.scss'),
+            __DIR__.'/app.scss' => base_path('resources/assets/sass/ie.scss'),
             __DIR__.'/_settings.scss' => base_path('resources/assets/sass/_settings.scss'),
             __DIR__.'/.gitignore.example' => base_path('.gitignore'),
             __DIR__.'/bower.json' => base_path('bower.json'),

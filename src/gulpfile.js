@@ -4,6 +4,8 @@ var elixir = require('laravel-elixir');
 require('laravel-elixir-imagemin');
 require('laravel-elixir-modernizr');
 
+var settings = require('./settings.js');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
