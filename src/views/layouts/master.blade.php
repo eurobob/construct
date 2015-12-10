@@ -14,7 +14,11 @@
       <link href="{{ elixir('css/ie.css') }}" rel="stylesheet">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-      <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+    @if (App::environment('local'))
+      <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    @else
+      <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
+    @endif
   <!--<![endif]-->
   @yield('styles')
 
@@ -23,6 +27,10 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <script src="{{ asset('svg/grunticon.loader.js') }}"></script>
+  <script>
+    grunticon(["{{ asset('svg/icons.data.svg.css') }}", "{{ asset('svg/icons.data.png.css') }}", "{{ asset('svg/icons.fallback.css') }}"], grunticon.svgLoadedCallback );
+  </script>
 </head>
 <body>
 @include('build::includes.partials.page-nav')
