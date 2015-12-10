@@ -33,16 +33,34 @@
   </script>
 </head>
 <body>
+
+<?php $isAdmin = Auth::check() ? 1 : 0; ?>
+
+@if ($isAdmin)
+  <div class="admin">
+    <div class="admin__bar">
+
+    </div>
+    <div class="admin__site">
+@endif
+
 @include('build::includes.partials.page-nav')
 
-@yield('page-header')
-@yield('content')
+<main>
+  @yield('content')
+</main>
 
 @include('build::includes.partials.page-footer')
 
+@if ($isAdmin)
+  <!-- Close admin -->
+    </div>
+  </div>
+@endif
+
 {{-- Scripts --}}
 <script src="{{ elixir('js/vendor/modernizr-custom.js') }}"></script>
-<?php if (env('GOOGLE_ANALYTICS')): ?>
+@if (env('GOOGLE_ANALYTICS'))
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -53,8 +71,7 @@
     ga('send', 'pageview');
 
   </script>
-<?php endif; ?>
-@yield('scripts')
+@endif
 
 </body>
 </html>
