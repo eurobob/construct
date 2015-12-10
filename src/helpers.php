@@ -21,24 +21,25 @@ function is_image($mimeType)
 }
 
 /**
- * Return "checked" if true
+ * Responsive images function
  */
-function checked($value)
+function get_srcset($image, $sizes, $defaultSize = '100vw')
 {
-    return $value ? 'checked' : '';
-}
-
-/**
- * Return img url for headers
- */
-function page_image($value = null)
-{
-    if (empty($value)) {
-        $value = config('site.page_image');
+  $imageSizes = config('blog.image_sizes');
+  $srcset = 'src="' . $image->url . '" srcset="';
+  $imageUrl = str_replace('.jpg', '', $image->url);
+  foreach ($imageSizes as $key => $size) {
+    if ($size <= $image->max_size) {
+      $srcset .= $imageUrl . '-' . $size . '.jpg ' . $size . 'w';
+      if ($key < count($imageSizes) - 1) {
+        $srcset .= ', ';
+      }
     }
-    if (! starts_with($value, 'http') && $value[0] !== '/') {
-        $value = config('site.uploads.webpath') . '/' . $value;
-    }
-
-    return $value;
+  }
+  $srcset .= '" sizes="';
+  foreach ($sizes as $size) {
+    $srcset .= $size . ", ";
+  }
+  $srcset .= $defaultSize . '"';
+  return $srcset;
 }
