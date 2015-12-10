@@ -32,7 +32,7 @@ class ContactController extends Controller
 
         Mail::send('build::includes.emails.contact', $data, function($message) use ($data) {
             $message->subject('Blog Contact Form: '.$data['name'])
-                    ->to(config('blog.contact_email'))
+                    ->to(config('site.contact_email'))
                     ->replyTo($data['email']);
         });
 

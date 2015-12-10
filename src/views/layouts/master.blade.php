@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ $meta_description }}">
-  <meta name="author" content="{{ config('blog.author') }}">
+  <meta name="author" content="{{ config('site.author') }}">
 
-  <title>{{ $title or config('blog.title') }}</title>
+  <title>{{ $title or config('site.title') }}</title>
 
   {{-- Styles --}}
   <!--[if lte IE 8]>

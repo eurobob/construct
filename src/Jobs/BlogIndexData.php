@@ -47,14 +47,14 @@ class BlogIndexData extends Job implements SelfHandling
           ->where('published_at', '<=', Carbon::now())
           ->where('is_draft', 0)
           ->orderBy('published_at', 'desc')
-          ->simplePaginate(config('blog.posts_per_page'));
+          ->simplePaginate(config('site.posts_per_page'));
 
         return [
-          'title' => config('blog.title'),
-          'subtitle' => config('blog.subtitle'),
+          'title' => config('site.title'),
+          'subtitle' => config('site.subtitle'),
           'posts' => $posts,
-          'page_image' => config('blog.page_image'),
-          'meta_description' => config('blog.description'),
+          'page_image' => config('site.page_image'),
+          'meta_description' => config('site.description'),
           'reverse_direction' => false,
           'tag' => null,
         ];
@@ -77,10 +77,10 @@ class BlogIndexData extends Job implements SelfHandling
           })
           ->where('is_draft', 0)
           ->orderBy('published_at', $reverse_direction ? 'asc' : 'desc')
-          ->simplePaginate(config('blog.posts_per_page'));
+          ->simplePaginate(config('site.posts_per_page'));
         $posts->addQuery('tag', $tag->tag);
 
-        $page_image = $tag->page_image ?: config('blog.page_image');
+        $page_image = $tag->page_image ?: config('site.page_image');
 
         return [
           'title' => $tag->title,
@@ -90,7 +90,7 @@ class BlogIndexData extends Job implements SelfHandling
           'tag' => $tag,
           'reverse_direction' => $reverse_direction,
           'meta_description' => $tag->meta_description ?: \
-              config('blog.description'),
+              config('site.description'),
         ];
     }
 }
