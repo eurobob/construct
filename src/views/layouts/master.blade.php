@@ -11,10 +11,10 @@
 
   {{-- Styles --}}
   <!--[if lte IE 8]>
-      <link href="{{ elixir('assets/css/ie.css') }}" rel="stylesheet">
+      <link href="{{ elixir('css/ie.css') }}" rel="stylesheet">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-      <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
+      <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
   <!--<![endif]-->
   @yield('styles')
 
@@ -33,7 +33,7 @@
 @include('build::includes.partials.page-footer')
 
 {{-- Scripts --}}
-<script src="{{ elixir('assets/js/vendor/modernizr-custom.js') }}"></script>
+<script src="{{ elixir('js/vendor/modernizr-custom.js') }}"></script>
 <?php if (env('GOOGLE_ANALYTICS')): ?>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
