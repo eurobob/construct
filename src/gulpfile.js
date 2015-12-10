@@ -59,41 +59,53 @@ var settings = require('./settings.js');
 
 elixir(function(mix) {
 
+    mix.browserSync({
+        browser: settings.browser,
+        files: [
+            'public/assets/css/app.css',
+            'public/assets/js/main.js',
+            'public/assets/js/form.js',
+            'resources/views/**/*'
+        ],
+        proxy: settings.localURL
+    });
 
-    mix.scripts([
-        'js/jquery.js',
-        'js/jquery.dataTables.js',
-        'js/dataTables.bootstrap.js'
-    ],
-    'public/assets/js/admin.js',
-    'resources/assets'
+    mix.gulpicon();
+
+    mix.imagemin("resources/assets/images", "public/build/assets/images/");
+    
+    mix.modernizr([
+            "resources/views/**/*.php",
+            "public/assets/css/app.css",
+            "public/assets/js/**/*.js"
+        ],
+        "public/assets/js/vendor/modernizr-custom.js",
+        {
+            "tests": settings.modernizrTests,
+            "options": settings.modernizrOptions
+        }
     );
 
     mix.sass('app.scss', 'public/assets/css/app.css')
-        .sass('ie.scss', 'public/assets/css/ie.css')
-        .imagemin("resources/assets/images", "public/build/assets/images/")
-        .modernizr([
-                "resources/views/**/*.php",
-                "public/assets/css/app.css",
-                "public/assets/js/**/*.js"
-            ],
-            "public/assets/js/vendor/modernizr-custom.js",
-            {
-                "tests": settings.modernizrTests,
-                "options": [
-                    "setClasses",
-                    "addTest",
-                    "testProp",
-                    "fnBind"
-                ]
-            }
-        )
-        .version([
-            'public/assets/css/app.css',
-            'public/assets/css/ie.css',
-            'public/assets/js/vendor/modernizr-custom.js'
-        ])
-        .browserSync({
-            proxy: settings.localURL
-        });
+        .sass('ie.scss', 'public/assets/css/ie.css');
+
+    mix.scripts([
+            'jquery.js',
+            'jquery.dataTables.js',
+            'dataTables.bootstrap.js'
+        ],
+        'public/assets/js/admin.js'
+    ).scripts([
+            'main.js'
+        ],
+        'public/assets/js/main.js'
+    );
+
+    mix.version([
+        'public/assets/css/app.css',
+        'public/assets/css/ie.css',
+        'public/assets/js/main.js',
+        'public/assets/js/admin.js',
+        'public/assets/js/vendor/modernizr-custom.js'
+    ]);
 });
