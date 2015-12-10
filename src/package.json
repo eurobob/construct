@@ -6,8 +6,7 @@
     "laravel-elixir-modernizr": "^1.0.1"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "laravel-elixir": "^3.0.0"
+    "laravel-elixir": "^3.0.0",
+    "laravel-elixir-gulpicon": "^1.0.1"
   }
 }
