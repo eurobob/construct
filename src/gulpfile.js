@@ -24,7 +24,6 @@ elixir(function(mix) {
         files: [
             'public/css/app.css',
             'public/js/main.js',
-            'public/js/form.js',
             'resources/views/**/*'
         ],
         proxy: settings.localURL

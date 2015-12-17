@@ -15,9 +15,9 @@
   <![endif]-->
   <!--[if gt IE 8]><!-->
     @if (App::environment('local'))
-      <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @else
-      <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
+      <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     @endif
   <!--<![endif]-->
   @yield('styles')
