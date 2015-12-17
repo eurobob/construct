@@ -3,10 +3,10 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "laravel-elixir-imagemin": "^0.2.1",
-    "laravel-elixir-modernizr": "^1.0.1"
+    "laravel-elixir-modernizr": "^1.1.0"
   },
   "dependencies": {
-    "laravel-elixir": "^3.0.0",
+    "laravel-elixir": "^4.1.1",
     "laravel-elixir-gulpicon": "^1.0.1"
   }
 }
