@@ -7,7 +7,7 @@ return [
     'posts_per_page' => 10,
     'uploads' => [
         'storage' => 's3',
-        'webpath' => 'https://s3-us-west-1.amazonaws.com/laraveltests',
+        'webpath' => 'https://s3-us-west-1.amazonaws.com/' . env('AWS_BUCKET'),
     ],
     'contact_email' => 'rob@liv.it',
     'image_sizes' => [
