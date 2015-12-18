@@ -4,9 +4,9 @@ namespace Livit\Build\Controllers;
 
 use Illuminate\Http\Request;
 use Livit\Build\Requests;
-use App\Http\Controllers\Controller;
+use Livit\Build\Controllers\AppController;
 
-class HomeController extends Controller
+class HomeController extends AppController
 {
     public function index()
     {

@@ -2,11 +2,11 @@
 
 namespace Livit\Build\Controllers;
 
-use App\Http\Controllers\Controller;
+use Livit\Build\Controllers\AppController;
 use Livit\Build\Requests\ContactMeRequest;
 use Illuminate\Support\Facades\Mail;
 
-class ContactController extends Controller
+class ContactController extends AppController
 {
     /**
      * Show the form
