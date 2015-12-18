@@ -11,7 +11,11 @@
 
   {{-- Styles --}}
   <!--[if lte IE 8]>
+    @if (App::environment('local'))
+      <link href="{{ asset('css/ie.css') }}" rel="stylesheet">
+    @else
       <link href="{{ elixir('css/ie.css') }}" rel="stylesheet">
+    @endif
   <![endif]-->
   <!--[if gt IE 8]><!-->
     @if (App::environment('local'))
