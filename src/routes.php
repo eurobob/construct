@@ -1,5 +1,7 @@
 <?php
 
+Route::get('test', 'Livit\Build\Controllers\PageController@index');
+
 Route::get('/', 'Livit\Build\Controllers\HomeController@index');
 Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
 Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');

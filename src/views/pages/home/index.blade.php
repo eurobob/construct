@@ -3,6 +3,7 @@
 
 @section('content')
 
-<p>Build something awseome</p>
+
+<p>Build something {{ $page }}</p>
 
 @stop
