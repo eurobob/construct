@@ -38,7 +38,7 @@
 
 @yield('content')
 
-<script src="/assets/js/admin.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 @yield('scripts')
