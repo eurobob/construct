@@ -11,7 +11,7 @@
             @include('build::admin.partials.errors')
 
             <form class="form-horizontal" role="form" method="POST"
-                  action="{{ url('/auth/login') }}">
+                  action="{{ url('/login') }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
               <div class="form-group">
