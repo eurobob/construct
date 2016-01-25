@@ -8,6 +8,10 @@ Route::get('admin', function () {
 $router->group([
     'middleware' => ['web', 'auth'],
 ], function () {
+    Route::get('/', ['as' => 'home', 'uses' => 'Livit\Build\Controllers\HomeController@index']);
+    Route::get('team', 'App\Http\Controllers\TeamController@index');
+    Route::get('user/{id}', 'App\Http\Controllers\TeamController@user');
+
     Route::resource('admin/sink', 'Livit\Build\Controllers\Admin\SinkController');
     Route::resource('admin/post', 'Livit\Build\Controllers\Admin\PostController', ['except' => 'show']);
     Route::resource('admin/tag', 'Livit\Build\Controllers\Admin\TagController', ['except' => 'show']);
@@ -22,8 +26,7 @@ $router->group([
     'middleware' => ['web'],
 ], function () {
     Route::get('test', 'Livit\Build\Controllers\PageController@index');
-
-    Route::get('/', ['as' => 'home', 'uses' => 'Livit\Build\Controllers\HomeController@index']);
+    
     Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
     Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');
     Route::get('contact', 'Livit\Build\Controllers\ContactController@showForm');
