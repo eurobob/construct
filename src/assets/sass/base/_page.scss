@@ -23,9 +23,15 @@ html {
     background-color: $base-background-color;
     color: $base-text-color;
     /*overflow-y: scroll; /* [2] */
+    height: 1px;
     min-height: 100%; /* [3] */
     -webkit-text-size-adjust: 100%; /* [4] */
         -ms-text-size-adjust: 100%; /* [4] */
     -moz-osx-font-smoothing: grayscale; /* [5] */
     -webkit-font-smoothing: antialiased; /* [5] */
+}
+
+body {
+    height: 1px;
+    min-height: 100%;
 }
