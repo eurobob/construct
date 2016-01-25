@@ -3,10 +3,10 @@
 
 @section('content')
 
-<p>Build something {{ $page }}</p>
+<p>This is the {{ $page }} page</p>
 
-@role('admin')
-    <h1>admin</h1>
+@role('author')
+    <h1>author</h1>
 @endrole
 
 @permission('create-post')

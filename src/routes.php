@@ -23,7 +23,7 @@ $router->group([
 ], function () {
     Route::get('test', 'Livit\Build\Controllers\PageController@index');
 
-    Route::get('/', 'Livit\Build\Controllers\HomeController@index');
+    Route::get('/', ['as' => 'home', 'uses' => 'Livit\Build\Controllers\HomeController@index']);
     Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
     Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');
     Route::get('contact', 'Livit\Build\Controllers\ContactController@showForm');
@@ -33,4 +33,7 @@ $router->group([
     Route::get('/login', 'Livit\Build\Controllers\Auth\AuthController@getLogin');
     Route::post('/login', 'Livit\Build\Controllers\Auth\AuthController@postLogin');
     Route::get('/logout', 'Livit\Build\Controllers\Auth\AuthController@getLogout');
+
+    Route::get('social/{provider}', 'Livit\Build\Controllers\Auth\AuthController@redirectToProvider');
+    Route::get('social/{provider}/callback', 'Livit\Build\Controllers\Auth\AuthController@handleProviderCallback');
 });

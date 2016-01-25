@@ -45,6 +45,7 @@
                 </div>
               </div>
             </form>
+            <a href="social/google">Sign in with google</a>
           </div>
         </div>
       </div>
