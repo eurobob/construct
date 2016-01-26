@@ -13,7 +13,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'first_name', 'last_name', 'email', 'password',
     ];
 
     /**
@@ -24,4 +24,36 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Set the name attribute and automatically the slug
+     *
+     * @param string $value
+     */
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = $value;
+
+        if (! $this->exists) {
+            $this->setUniqueSlug($value, '');
+        }
+    }
+
+    /**
+     * Recursive routine to set a unique slug
+     *
+     * @param string $title
+     * @param mixed $extra
+     */
+    protected function setUniqueSlug($title, $extra)
+    {
+        $slug = str_slug($title.'-'.$extra);
+
+        if (static::whereSlug($slug)->exists()) {
+            $this->setUniqueSlug($title, $extra + 1);
+            return;
+        }
+
+        $this->attributes['slug'] = $slug;
+    }
 }

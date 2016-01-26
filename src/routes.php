@@ -9,8 +9,6 @@ $router->group([
     'middleware' => ['web', 'auth'],
 ], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'Livit\Build\Controllers\HomeController@index']);
-    Route::get('team', 'App\Http\Controllers\TeamController@index');
-    Route::get('user/{id}', 'App\Http\Controllers\TeamController@user');
 
     Route::resource('admin/sink', 'Livit\Build\Controllers\Admin\SinkController');
     Route::resource('admin/post', 'Livit\Build\Controllers\Admin\PostController', ['except' => 'show']);

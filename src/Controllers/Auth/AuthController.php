@@ -48,23 +48,24 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    private function findOrCreateUser($user)
+    private function findOrCreateUser($socialUser)
     {
-        if ($authUser = User::where('email', $user->email)->first()) {
+        if ($authUser = User::where('email', $socialUser->email)->first()) {
             return $authUser;
         }
 
         $user = User::create([
-            'name' => $user->name,
-            'email' => $user->email,
+            'name' => $socialUser->name,
+            'first_name' => strtolower($socialUser->user['name']['givenName']),
+            'last_name' => strtolower($socialUser->user['name']['familyName']),
+            'email' => $socialUser->email,
         ]);
 
         $scope = Scope::whereName('limited')->first();
         $role = Role::whereName('author')->first();
 
-        $emailSuffix = substr($user->email, strpos($user->email, '@') + 1);
 
-        if ($emailSuffix === 'liv.it') {
+        if ($socialUser->user['domain'] === 'liv.it') {
             $scope = Scope::whereName('ecosystem')->first();
         }
 
