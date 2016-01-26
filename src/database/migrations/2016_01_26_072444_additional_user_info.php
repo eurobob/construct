@@ -13,9 +13,8 @@ class AdditionalUserInfo extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('name');
-            $table->string('first_name')->after('id');
-            $table->string('last_name')->after('id');
+            $table->string('first_name')->after('name');
+            $table->string('last_name')->after('first_name');
             $table->string('slug')->after('last_name');
             $table->string('biography')->after('password');
             $table->string('phone_number')->after('biography');
@@ -26,6 +25,8 @@ class AdditionalUserInfo extends Migration
             $table->string('birthday')->after('linkedin');
             $table->string('location')->after('birthday');
             $table->string('start_date')->after('location');
+            $table->string('end_date')->after('start_date');
+            $table->boolean('authorised')->after('end_date');
         });
     }
 
@@ -37,7 +38,6 @@ class AdditionalUserInfo extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('name')->after('id');
             $table->dropColumn('first_name');
             $table->dropColumn('last_name');
             $table->dropColumn('slug');
@@ -50,6 +50,8 @@ class AdditionalUserInfo extends Migration
             $table->dropColumn('birthday');
             $table->dropColumn('location');
             $table->dropColumn('start_date');
+            $table->dropColumn('end_date');
+            $table->dropColumn('authorised');
         });
     }
 }

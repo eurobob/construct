@@ -43,9 +43,13 @@ class AuthController extends Controller
 
         $authUser = $this->findOrCreateUser($user);
 
-        \Auth::login($authUser, true);
+        if ($authUser->authorised) {
+            \Auth::login($authUser, true);
+            return redirect()->route('home');
+        }
 
-        return redirect()->route('home');
+        return redirect()->route('unauthorised');
+
     }
 
     private function findOrCreateUser($socialUser)
@@ -54,20 +58,22 @@ class AuthController extends Controller
             return $authUser;
         }
 
+        $authorised = 0;
+        $scope = Scope::whereName('limited')->first();
+        $role = Role::whereName('author')->first();
+
+        if (isset($socialUser->user['domain']) && $socialUser->user['domain'] === 'liv.it') {
+            $scope = Scope::whereName('ecosystem')->first();
+            $authorised = 1;
+        }
+
         $user = User::create([
             'name' => $socialUser->name,
             'first_name' => strtolower($socialUser->user['name']['givenName']),
             'last_name' => strtolower($socialUser->user['name']['familyName']),
             'email' => $socialUser->email,
+            'authorised' => $authorised,
         ]);
-
-        $scope = Scope::whereName('limited')->first();
-        $role = Role::whereName('author')->first();
-
-
-        if ($socialUser->user['domain'] === 'liv.it') {
-            $scope = Scope::whereName('ecosystem')->first();
-        }
 
         $user->attachScope($scope);
         $user->attachRole($role);

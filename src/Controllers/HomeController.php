@@ -11,4 +11,10 @@ class HomeController extends AppController
         $this->pageRepository->findByName('home');
         return view('build::pages.home.index');
     }
+
+    public function unauthorised()
+    {
+        $this->pageRepository->findByName('unauthorised');
+        return view('build::pages.home.unauthorised');
+    }
 }

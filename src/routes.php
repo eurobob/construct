@@ -24,6 +24,7 @@ $router->group([
     'middleware' => ['web'],
 ], function () {
     Route::get('test', 'Livit\Build\Controllers\PageController@index');
+    Route::get('unauthorised', ['as' => 'unauthorised', 'uses' => 'Livit\Build\Controllers\HomeController@unauthorised']);
     
     Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
     Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');
