@@ -19,7 +19,7 @@ class PageRepository implements PageRepositoryInterface
             $page->name = $name;
             $page->save();
         }
-        return $page->name;
+        \View::share('page', $page->name);
     }
 
 }
