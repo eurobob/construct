@@ -10,14 +10,14 @@ class AppController extends Controller
 {
 
     protected $user;
-    protected $unauthorised;
+    protected $unauthorisedUserCount;
 
     public function __construct(PageRepository $pageRepository)
     {
         $this->pageRepository = $pageRepository;
         $this->user = \Auth::user();
-        $this->unauthorised = count(User::whereAuthorised(0)->get());
+        $this->unauthorisedUserCount = count(User::whereAuthorised(0)->get());
         \View::share('user', $this->user);
-        \View::share('unauthorised', $this->unauthorised);
+        \View::share('unauthorisedUserCount', $this->unauthorisedUserCount);
     }
 }
