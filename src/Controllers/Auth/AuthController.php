@@ -2,6 +2,7 @@
 
 namespace Livit\Build\Controllers\Auth;
 
+use App\Startup;
 use Livit\Build\User;
 use Livit\Build\Scope;
 use Livit\Build\Role;
@@ -61,9 +62,13 @@ class AuthController extends Controller
         $authorised = 0;
         $scope = Scope::whereName('limited')->first();
         $role = Role::whereName('author')->first();
+        $startup = null;
 
         if (isset($socialUser->user['domain']) && $socialUser->user['domain'] === 'liv.it') {
             $scope = Scope::whereName('ecosystem')->first();
+            $authorised = 1;
+        } else if (isset($socialUser->user['domain']) && $startup = Startup::where('email', $socialUser->user['domain'])->first()) {
+            $scope = Scope::whereName('startup')->first();
             $authorised = 1;
         }
 
@@ -74,6 +79,10 @@ class AuthController extends Controller
             'email' => $socialUser->email,
             'authorised' => $authorised,
         ]);
+
+        if ($startup) {
+            $user->startups()->attach($startup);
+        }
 
         $user->attachScope($scope);
         $user->attachRole($role);

@@ -56,4 +56,14 @@ class User extends Authenticatable
 
         $this->attributes['slug'] = $slug;
     }
+
+    /**
+     * Many-to-Many relations with Role.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function startups()
+    {
+        return $this->belongsToMany('App\Startup');
+    }
 }
