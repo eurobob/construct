@@ -43,3 +43,21 @@ function get_srcset($image, $sizes, $defaultSize = '100vw')
   $srcset .= $defaultSize . '"';
   return $srcset;
 }
+
+/**
+ * Recursive routine to set a unique slug
+ *
+ * @param string $title
+ * @param mixed $extra
+ */
+function setUniqueSlug($object, $title, $extra)
+{
+    $slug = str_slug($title.'-'.$extra);
+
+    if ($object->whereSlug($slug)->exists()) {
+        return setUniqueSlug($object, $title, $extra + 1);
+    }
+    
+    return $slug;
+    
+}

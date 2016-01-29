@@ -19,6 +19,7 @@ class LivitBuildServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views', 'build');
 
         $this->publishes([
+            __DIR__.'/AppController.php' => base_path('app/Http/Controllers/AppController.php'),
             __DIR__.'/app.scss' => base_path('resources/assets/sass/app.scss'),
             __DIR__.'/ie.scss' => base_path('resources/assets/sass/ie.scss'),
             __DIR__.'/main.js' => base_path('resources/assets/js/main.js'),

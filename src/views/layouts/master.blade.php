@@ -43,11 +43,12 @@
 @if ($isAdmin)
   <div class="admin">
     <div class="admin__bar">
-      @include('build::includes.partials.page-nav')
+      @include('build::admin.partials.navbar')
     </div>
     <div class="admin__site">
 @endif
 
+@include('build::includes.partials.page-nav')
 
 <main>
   @yield('content')

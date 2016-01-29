@@ -24,7 +24,6 @@ $router->group([
     'middleware' => ['web'],
 ], function () {
     Route::get('test', 'Livit\Build\Controllers\PageController@index');
-    Route::get('unauthorised', ['as' => 'unauthorised', 'uses' => 'Livit\Build\Controllers\HomeController@unauthorised']);
     
     Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
     Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');
@@ -32,10 +31,10 @@ $router->group([
     Route::post('contact', 'Livit\Build\Controllers\ContactController@sendContactInfo');
 
     // Logging in and out
-    Route::get('/login', 'Livit\Build\Controllers\Auth\AuthController@getLogin');
-    Route::post('/login', 'Livit\Build\Controllers\Auth\AuthController@postLogin');
-    Route::get('/logout', 'Livit\Build\Controllers\Auth\AuthController@getLogout');
+    Route::get('/login', 'App\Http\Controllers\Auth\AuthController@getLogin');
+    Route::post('/login', 'App\Http\Controllers\Auth\AuthController@postLogin');
+    Route::get('/logout', 'App\Http\Controllers\Auth\AuthController@logout');
 
-    Route::get('social/{provider}', 'Livit\Build\Controllers\Auth\AuthController@redirectToProvider');
-    Route::get('social/{provider}/callback', 'Livit\Build\Controllers\Auth\AuthController@handleProviderCallback');
+    Route::get('social/{provider}', 'App\Http\Controllers\Auth\AuthController@redirectToProvider');
+    Route::get('social/{provider}/callback', 'App\Http\Controllers\Auth\AuthController@handleProviderCallback');
 });
