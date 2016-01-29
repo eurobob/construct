@@ -2,7 +2,7 @@
 
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
-trait User
+trait LivitBuildUser
 {
     use EntrustUserTrait;
 
