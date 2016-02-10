@@ -1,9 +1,17 @@
 {
   "private": true,
   "devDependencies": {
+    "babel-loader": "^6.2.2",
+    "css-loader": "^0.23.1",
     "gulp": "^3.8.8",
     "laravel-elixir-imagemin": "^0.2.1",
-    "laravel-elixir-modernizr": "^1.1.0"
+    "laravel-elixir-modernizr": "^1.1.0",
+    "laravel-elixir-vueify": "^1.0.2",
+    "vue-html-loader": "^1.1.0",
+    "vue-resource": "^0.7.0",
+    "vue-router": "^0.7.10",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.13"
   },
   "dependencies": {
     "laravel-elixir": "^4.1.1",

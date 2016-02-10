@@ -23,7 +23,7 @@ elixir(function(mix) {
         browser: settings.browser,
         files: [
             'public/css/app.css',
-            'public/js/main.js',
+            'public/js/admin.js',
             'resources/views/**/*'
         ],
         proxy: settings.localURL
@@ -48,16 +48,12 @@ elixir(function(mix) {
     mix.sass('app.scss', 'public/css/app.css')
         .sass('ie.scss', 'public/css/ie.css');
 
-    mix.scripts([
-            'main.js'
-        ],
-        'public/js/main.js'
-    );
-
     mix.version([
         'public/css/app.css',
         'public/css/ie.css',
-        'public/js/main.js',
+        'public/js/admin.js',
         'public/js/vendor/modernizr-custom.js'
     ]);
+
+    mix.browserify('../vendor/build/js/admin.js');
 });

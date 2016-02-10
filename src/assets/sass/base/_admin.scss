@@ -21,3 +21,28 @@
         min-height: 100%;
         overflow: scroll;
     }
+
+.editable {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #eee;
+    }
+}
+    .editable__input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        border: 0;
+        background-color: transparent;
+        font-weight: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        padding: inherit;
+        color: red;
+    }

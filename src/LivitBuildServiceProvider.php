@@ -22,7 +22,7 @@ class LivitBuildServiceProvider extends ServiceProvider
             __DIR__.'/AppController.php' => base_path('app/Http/Controllers/AppController.php'),
             __DIR__.'/app.scss' => base_path('resources/assets/sass/app.scss'),
             __DIR__.'/ie.scss' => base_path('resources/assets/sass/ie.scss'),
-            __DIR__.'/main.js' => base_path('resources/assets/js/main.js'),
+            __DIR__.'/admin.js' => base_path('resources/assets/js/admin.js'),
             __DIR__.'/svg' => base_path('resources/assets/svg'),
             __DIR__.'/_settings.scss' => base_path('resources/assets/sass/_settings.scss'),
             __DIR__.'/.gitignore.example' => base_path('.gitignore'),

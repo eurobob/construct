@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ $meta_description or config('site.description') }}">
   <meta name="author" content="{{ config('site.author') }}">
+  <meta id="token" name="token" value="{{ csrf_token() }}">
 
   <title>{{ $title or config('site.title') }}</title>
 
@@ -64,6 +65,15 @@
 
 {{-- Scripts --}}
 <script src="{{ elixir('js/vendor/modernizr-custom.js') }}"></script>
+
+@if($isAdmin)
+  @if (App::environment('local'))
+    <script src="{{ asset('js/admin.js') }}"></script>
+  @else
+    <script src="{{ elixir('js/admin.js') }}"></script>
+  @endif
+@endif
+
 @if (env('GOOGLE_ANALYTICS'))
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
