@@ -42,7 +42,7 @@
 <?php $isAdmin = Auth::check() ? 1 : 0; ?>
 
 @if ($isAdmin)
-  <div class="admin">
+  <div class="admin" id="app">
     <div class="admin__bar">
       @include('build::admin.partials.navbar')
     </div>

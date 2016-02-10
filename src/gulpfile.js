@@ -48,6 +48,8 @@ elixir(function(mix) {
     mix.sass('app.scss', 'public/css/app.css')
         .sass('ie.scss', 'public/css/ie.css');
 
+    mix.browserify('../vendor/build/js/admin.js');
+    
     mix.version([
         'public/css/app.css',
         'public/css/ie.css',
@@ -55,5 +57,4 @@ elixir(function(mix) {
         'public/js/vendor/modernizr-custom.js'
     ]);
 
-    mix.browserify('../vendor/build/js/admin.js');
 });
