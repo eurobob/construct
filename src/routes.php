@@ -18,6 +18,8 @@ $router->group([
     Route::delete('admin/upload/file', 'Livit\Build\Controllers\Admin\UploadController@deleteFile');
     Route::post('admin/upload/folder', 'Livit\Build\Controllers\Admin\UploadController@createFolder');
     Route::delete('admin/upload/folder', 'Livit\Build\Controllers\Admin\UploadController@deleteFolder');
+
+    Route::put('edit/{model}/{id}', 'Livit\Build\Controllers\EditableController@update');
 });
 
 $router->group([
