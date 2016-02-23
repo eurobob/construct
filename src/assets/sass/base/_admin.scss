@@ -23,12 +23,12 @@
     }
 
 .editable {
-    display: block;
+    display: inline-block;
     position: relative;
     cursor: pointer;
 
     &:hover {
-        background-color: #eee;
+        background-color: rgba(0, 0, 0, .2);
     }
 }
     .editable__input {
@@ -44,5 +44,5 @@
         font-family: inherit;
         font-size: inherit;
         padding: inherit;
-        color: red;
+        color: inherit;
     }

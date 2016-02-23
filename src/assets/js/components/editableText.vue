@@ -1,6 +1,7 @@
 <template>
     <span class="editable" 
         @dblclick="startEditing"
+        @click.prevent.stop
         :class="{'-visible': !editing, '-hidden': editing}">
         {{ value || placeholder || 'Enter ' + (key || 'text') }}
         <input class="editable__input"
