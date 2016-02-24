@@ -37,7 +37,7 @@
     grunticon(["{{ asset('svg/icons.data.svg.css') }}", "{{ asset('svg/icons.data.png.css') }}", "{{ asset('svg/icons.fallback.css') }}"], grunticon.svgLoadedCallback );
   </script>
 </head>
-<body>
+<body class="{{ $appClasses }}">
 
 <?php $isAdmin = Auth::check() ? 1 : 0; ?>
 
@@ -51,9 +51,7 @@
 
 @include('build::includes.partials.page-nav')
 
-<main>
-  @yield('content')
-</main>
+@include('build::includes.partials.page-main')
 
 @include('build::includes.partials.page-footer')
 
