@@ -6,6 +6,7 @@ trait LivitBuildAppController
 {
 
     protected $user;
+    protected $appClasses;
 
     public function __construct($pageRepository)
     {

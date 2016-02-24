@@ -37,7 +37,7 @@
     grunticon(["{{ asset('svg/icons.data.svg.css') }}", "{{ asset('svg/icons.data.png.css') }}", "{{ asset('svg/icons.fallback.css') }}"], grunticon.svgLoadedCallback );
   </script>
 </head>
-<body class="{{ $appClasses }}">
+<body class="{{ $appClasses or '' }}">
 
 <?php $isAdmin = Auth::check() ? 1 : 0; ?>
 
