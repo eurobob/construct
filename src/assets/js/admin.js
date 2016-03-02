@@ -6,6 +6,7 @@ Vue.use(require('vue-router'));
 Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
 
 import editableText from './components/editableText.vue';
+import editableText from './components/editableTextarea.vue';
 
 new Vue({
     el: '#app',
@@ -13,6 +14,7 @@ new Vue({
         appLoaded: true
     },
     components: {
-        editableText
+        editableText,
+        editableTextarea
     }
 });
