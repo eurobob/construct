@@ -37,10 +37,6 @@ class LivitBuildServiceProvider extends ServiceProvider
             __DIR__.'/database/migrations' => $this->app->databasePath().'/migrations',
         ]);
 
-        $this->publishes([
-            __DIR__.'/assets' => base_path('resources/assets/vendor/build'),
-        ], 'publish');
-
         include __DIR__.'/routes.php';
     }
 

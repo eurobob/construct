@@ -72,6 +72,6 @@ This will yield:
     background-size: cover;
     
     @include old-ie {
-        -ms-behavior: url(../vendor/build/behaviors/backgroundsize.min.htc);
+        -ms-behavior: url(./vendor/livit/build/src/assets/behaviors/backgroundsize.min.htc);
     }
 }
