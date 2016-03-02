@@ -1,1 +1,1 @@
-import '../vendor/build/js/admin.js';
+import '../../../vendor/livit/build/src/assets/js/admin.js';
