@@ -16,7 +16,7 @@
     ],
     "require": {
         "michelf/php-markdown": "^1.5",
-        "michelf/php-smartypants": "1.6.0-beta1@beta",
+        "michelf/php-smartypants": "*",
         "dflydev/apache-mime-types": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "doctrine/dbal": "^2.5",
