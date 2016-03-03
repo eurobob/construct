@@ -1,10 +1,10 @@
 <?php
 
-namespace Livit\Build;
+namespace Livit\Build\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class App extends Model
 {
-    
+
 }

@@ -5,8 +5,8 @@ namespace Livit\Build\Controllers;
 use App\Http\Controllers\Controller;
 use Livit\Build\Jobs\BlogIndexData;
 use Livit\Build\Requests;
-use Livit\Build\Post;
-use Livit\Build\Tag;
+use Livit\Build\Models\Post;
+use Livit\Build\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller

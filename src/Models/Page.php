@@ -1,8 +1,8 @@
 <?php
 
-namespace Livit\Build;
+namespace Livit\Build\Models;
 
-use Livit\Build\App;
+use Livit\Build\Models\App;
 
 class Page extends App
 {
@@ -12,6 +12,6 @@ class Page extends App
 
     // public function pageElements()
     // {
-    //     return $this->hasMany('Livit\Build\PageElement');
+    //     return $this->hasMany('Livit\Build\Models\PageElement');
     // }
 }

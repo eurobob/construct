@@ -2,7 +2,7 @@
 
 namespace Livit\Build\Repositories;
 
-use Livit\Build\Page;
+use Livit\Build\Models\Page;
 
 class PageRepository implements PageRepositoryInterface
 {

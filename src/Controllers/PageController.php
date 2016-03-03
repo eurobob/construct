@@ -2,7 +2,7 @@
 
 namespace Livit\Build\Controllers;
 
-use Livit\Build\Page;
+use Livit\Build\Models\Page;
 
 class PageController extends AppController
 {
@@ -11,5 +11,5 @@ class PageController extends AppController
     {
 
     }
-    
+
 }
