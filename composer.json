@@ -8,13 +8,20 @@
             "email": "rob@liv.it"
         }
     ],
-    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/hiendv/entrust"
+        }
+    ],
     "require": {
         "michelf/php-markdown": "^1.5",
-        "michelf/php-smartypants": "1.6.0-beta1",
+        "michelf/php-smartypants": "1.6.0-beta1@beta",
         "dflydev/apache-mime-types": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "laravel/socialite": "^2.0",
+        "zizaco/entrust": "dev-laravel-5-2@dev"
     },
     "post-install-cmd": [
         "npm install",
