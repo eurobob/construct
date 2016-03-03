@@ -47,6 +47,7 @@ class LivitBuildServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->register('Zizaco\Entrust\EntrustServiceProvider');
+        $this->app->register('Laravel\Socialite\SocialiteServiceProvider');
     }
 }
