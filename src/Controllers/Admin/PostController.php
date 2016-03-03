@@ -7,7 +7,7 @@ use Livit\Build\Requests;
 use Livit\Build\Requests\PostCreateRequest;
 use Livit\Build\Requests\PostUpdateRequest;
 use App\Http\Controllers\Controller;
-use Livit\Build\Post;
+use Livit\Build\Models\Post;
 
 class PostController extends Controller
 {

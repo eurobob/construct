@@ -2,8 +2,8 @@
 
 namespace Livit\Build\Jobs;
 
-use Livit\Build\Post;
-use Livit\Build\Tag;
+use Livit\Build\Models\Post;
+use Livit\Build\Models\Tag;
 use App\Jobs\Job;
 use Carbon\Carbon;
 use Illuminate\Contracts\Bus\SelfHandling;
