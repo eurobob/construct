@@ -22,7 +22,7 @@
         "doctrine/dbal": "^2.5",
         "laravel/socialite": "^2.0",
         "zizaco/entrust": "dev-laravel-5-2@dev"
-    }
+    },
     "post-install-cmd": [
         "npm install",
         "bower install",
