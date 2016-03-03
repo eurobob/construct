@@ -24,8 +24,8 @@ class EditableServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('edit', function ($app) {
-            return new Livit\Build\Models\Editable();
+            return new \Livit\Build\Models\Editable();
         });
-        $this->app->alias('edit', 'Livit\Build\Models\Editable');
+        $this->app->alias('edit', '\Livit\Build\Models\Editable');
     }
 }
