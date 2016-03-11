@@ -12,7 +12,7 @@ let lbComponents = {
     editableTextarea
 }
 
-export default {
+export {
     lbData,
     lbEvents,
     lbComponents

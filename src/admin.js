@@ -18,9 +18,9 @@ let appEvents = {}
 import { lbData, lbEvents, lbComponents } from '../../../vendor/livit/build/src/assets/js/admin.js'
 
 // Merge objects
-const data = Object.assign(objectToMergeTo, appData, lbData)
-const components = Object.assign(objectToMergeTo, appComponents, lbComponents)
-const events = Object.assign(objectToMergeTo, appEvents, lbEvents)
+const data = Object.assign({}, appData, lbData)
+const components = Object.assign({}, appComponents, lbComponents)
+const events = Object.assign({}, appEvents, lbEvents)
 
 // Initialise Vue
 new Vue({
