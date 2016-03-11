@@ -1,20 +1,19 @@
-var Vue = require('vue');
-
-Vue.use(require('vue-resource'));
-Vue.use(require('vue-router'));
-
-Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
-
 import editableText from './components/editableText.vue';
 import editableTextarea from './components/editableTextarea.vue';
 
-new Vue({
-    el: '#app',
-    data: {
-        appLoaded: true
-    },
-    components: {
-        editableText,
-        editableTextarea
-    }
-});
+let lbData = {
+    appLoaded: true
+}
+
+let lbEvents = {}
+
+let lbComponents = {
+    editableText,
+    editableTextarea
+}
+
+export default {
+    lbData,
+    lbEvents,
+    lbComponents
+}
