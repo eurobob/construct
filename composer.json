@@ -10,15 +10,14 @@
     ],
     "require": {
         "michelf/php-markdown": "^1.5",
-        "michelf/php-smartypants": "1.6.0-beta1",
+        "michelf/php-smartypants": "1.6.0-beta1@dev",
         "dflydev/apache-mime-types": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "doctrine/dbal": "^2.5"
     },
     "post-install-cmd": [
         "npm install",
-        "bower install",
-        "gulp copyfiles"
+        "bower install"
     ],
     "post-update-cmd": [
         "php artisan vendor:publish --tag=publish --force"
