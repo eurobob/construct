@@ -1,8 +1,8 @@
 <?php
 
-namespace Livit\Build\Models;
+namespace Eurobob\Construct\Models;
 
-use Livit\Build\Services\Markdowner;
+use Eurobob\Construct\Services\Markdowner;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
@@ -22,7 +22,7 @@ class Post extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('Livit\Build\Models\Tag', 'post_tag_pivot');
+        return $this->belongsToMany('Eurobob\Construct\Models\Tag', 'post_tag_pivot');
     }
 
     /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace Livit\Build\Controllers;
+namespace Eurobob\Construct\Controllers;
 
-use Livit\Build\Controllers\AppController;
-use Livit\Build\Requests\ContactMeRequest;
+use Eurobob\Construct\Controllers\AppController;
+use Eurobob\Construct\Requests\ContactMeRequest;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends AppController

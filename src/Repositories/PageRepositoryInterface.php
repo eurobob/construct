@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\Repositories;
+namespace Eurobob\Construct\Repositories;
 
 interface PageRepositoryInterface
 {

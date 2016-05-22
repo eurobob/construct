@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Livit\Build\Controllers\LivitBuildAppController;
-use Livit\Build\Repositories\PageRepository;
+use Eurobob\Construct\Controllers\EurobobConstructAppController;
+use Eurobob\Construct\Repositories\PageRepository;
 use App\Http\Controllers\Controller;
 use App\User;
 
 class AppController extends Controller
 {
-    use LivitBuildAppController {
-        LivitBuildAppController::__construct as private __livitBuildAppControllerConstruct;
+    use EurobobConstructAppController {
+        EurobobConstructAppController::__construct as private __EurobobConstructAppControllerConstruct;
     }
 
     public function __construct(PageRepository $pageRepository)
     {
-        $this->__livitBuildAppControllerConstruct($pageRepository);
+        $this->__EurobobConstructAppControllerConstruct($pageRepository);
     }
 }

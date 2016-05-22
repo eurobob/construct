@@ -1,8 +1,8 @@
 <?php
 
-namespace Livit\Build\Controllers;
+namespace Eurobob\Construct\Controllers;
 
-use Livit\Build\Models\Page;
+use Eurobob\Construct\Models\Page;
 
 class PageController extends AppController
 {

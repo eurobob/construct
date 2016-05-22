@@ -1,12 +1,12 @@
 <?php
 
-namespace Livit\Build\Controllers;
+namespace Eurobob\Construct\Controllers;
 
 use App\Http\Controllers\Controller;
-use Livit\Build\Jobs\BlogIndexData;
-use Livit\Build\Requests;
-use Livit\Build\Models\Post;
-use Livit\Build\Models\Tag;
+use Eurobob\Construct\Jobs\BlogIndexData;
+use Eurobob\Construct\Requests;
+use Eurobob\Construct\Models\Post;
+use Eurobob\Construct\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller

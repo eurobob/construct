@@ -1,6 +1,6 @@
 <?php 
 
-namespace Livit\Build\Services;
+namespace Eurobob\Construct\Services;
 
 use Michelf\MarkdownExtra;
 use Michelf\SmartyPants;

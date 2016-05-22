@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\Controllers\Auth;
+namespace Eurobob\Construct\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;

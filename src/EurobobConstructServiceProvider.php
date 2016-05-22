@@ -1,11 +1,11 @@
 <?php
 
-namespace Livit\Build;
+namespace Eurobob\Construct;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-class LivitBuildServiceProvider extends ServiceProvider
+class EurobobConstructServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

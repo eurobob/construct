@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\Controllers;
+namespace Eurobob\Construct\Controllers;
 
 use App\Http\Controllers\AppController;
 

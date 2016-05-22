@@ -1,11 +1,11 @@
 <?php
-namespace Livit\Build\Controllers\Admin;
+namespace Eurobob\Construct\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Livit\Build\Services\UploadsManager;
+use Eurobob\Construct\Services\UploadsManager;
 use Illuminate\Http\Request;
-use Livit\Build\Requests\UploadFileRequest;
-use Livit\Build\Requests\UploadNewFolderRequest;
+use Eurobob\Construct\Requests\UploadFileRequest;
+use Eurobob\Construct\Requests\UploadNewFolderRequest;
 use Illuminate\Support\Facades\File;
 
 class UploadController extends Controller

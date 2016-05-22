@@ -8,29 +8,29 @@ Route::get('admin', function () {
 $router->group([
     'middleware' => ['web', 'auth'],
 ], function () {
-    Route::get('/', ['as' => 'home', 'uses' => 'Livit\Build\Controllers\HomeController@index']);
+    Route::get('/', ['as' => 'home', 'uses' => 'Eurobob\Construct\Controllers\HomeController@index']);
 
-    Route::resource('admin/sink', 'Livit\Build\Controllers\Admin\SinkController');
-    Route::resource('admin/post', 'Livit\Build\Controllers\Admin\PostController', ['except' => 'show']);
-    Route::resource('admin/tag', 'Livit\Build\Controllers\Admin\TagController', ['except' => 'show']);
-    Route::get('admin/upload', 'Livit\Build\Controllers\Admin\UploadController@index');
-    Route::post('admin/upload/file', 'Livit\Build\Controllers\Admin\UploadController@uploadFile');
-    Route::delete('admin/upload/file', 'Livit\Build\Controllers\Admin\UploadController@deleteFile');
-    Route::post('admin/upload/folder', 'Livit\Build\Controllers\Admin\UploadController@createFolder');
-    Route::delete('admin/upload/folder', 'Livit\Build\Controllers\Admin\UploadController@deleteFolder');
+    Route::resource('admin/sink', 'Eurobob\Construct\Controllers\Admin\SinkController');
+    Route::resource('admin/post', 'Eurobob\Construct\Controllers\Admin\PostController', ['except' => 'show']);
+    Route::resource('admin/tag', 'Eurobob\Construct\Controllers\Admin\TagController', ['except' => 'show']);
+    Route::get('admin/upload', 'Eurobob\Construct\Controllers\Admin\UploadController@index');
+    Route::post('admin/upload/file', 'Eurobob\Construct\Controllers\Admin\UploadController@uploadFile');
+    Route::delete('admin/upload/file', 'Eurobob\Construct\Controllers\Admin\UploadController@deleteFile');
+    Route::post('admin/upload/folder', 'Eurobob\Construct\Controllers\Admin\UploadController@createFolder');
+    Route::delete('admin/upload/folder', 'Eurobob\Construct\Controllers\Admin\UploadController@deleteFolder');
 
-    Route::put('edit/{model}/{id}', 'Livit\Build\Controllers\EditableController@update');
+    Route::put('edit/{model}/{id}', 'Eurobob\Construct\Controllers\EditableController@update');
 });
 
 $router->group([
     'middleware' => ['web'],
 ], function () {
-    Route::get('test', 'Livit\Build\Controllers\PageController@index');
+    Route::get('test', 'Eurobob\Construct\Controllers\PageController@index');
     
-    Route::get('blog', 'Livit\Build\Controllers\BlogController@index');
-    Route::get('blog/{slug}', 'Livit\Build\Controllers\BlogController@showPost');
-    Route::get('contact', 'Livit\Build\Controllers\ContactController@showForm');
-    Route::post('contact', 'Livit\Build\Controllers\ContactController@sendContactInfo');
+    Route::get('blog', 'Eurobob\Construct\Controllers\BlogController@index');
+    Route::get('blog/{slug}', 'Eurobob\Construct\Controllers\BlogController@showPost');
+    Route::get('contact', 'Eurobob\Construct\Controllers\ContactController@showForm');
+    Route::post('contact', 'Eurobob\Construct\Controllers\ContactController@sendContactInfo');
 
     // Logging in and out
     Route::get('/login', 'App\Http\Controllers\Auth\AuthController@getLogin');

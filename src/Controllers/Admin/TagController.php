@@ -1,14 +1,14 @@
 <?php
 
-namespace Livit\Build\Controllers\Admin;
+namespace Eurobob\Construct\Controllers\Admin;
 
-use Livit\Build\Models\Tag;
+use Eurobob\Construct\Models\Tag;
 
 use Illuminate\Http\Request;
 
-use Livit\Build\Requests;
-use Livit\Build\Requests\TagCreateRequest;
-use Livit\Build\Requests\TagUpdateRequest;
+use Eurobob\Construct\Requests;
+use Eurobob\Construct\Requests\TagCreateRequest;
+use Eurobob\Construct\Requests\TagUpdateRequest;
 use App\Http\Controllers\Controller;
 
 class TagController extends Controller

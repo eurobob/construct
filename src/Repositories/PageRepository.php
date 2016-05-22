@@ -1,8 +1,8 @@
 <?php
 
-namespace Livit\Build\Repositories;
+namespace Eurobob\Construct\Repositories;
 
-use Livit\Build\Models\Page;
+use Eurobob\Construct\Models\Page;
 
 class PageRepository implements PageRepositoryInterface
 {

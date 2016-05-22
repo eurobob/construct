@@ -1,8 +1,8 @@
 <?php
 
-namespace Livit\Build\Models;
+namespace Eurobob\Construct\Models;
 
-use Livit\Build\Models\App;
+use Eurobob\Construct\Models\App;
 
 class Page extends App
 {
@@ -12,6 +12,6 @@ class Page extends App
 
     // public function pageElements()
     // {
-    //     return $this->hasMany('Livit\Build\Models\PageElement');
+    //     return $this->hasMany('Eurobob\Construct\Models\PageElement');
     // }
 }

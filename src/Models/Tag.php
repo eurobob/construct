@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\Models;
+namespace Eurobob\Construct\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class Tag extends Model
        */
       public function posts()
       {
-        return $this->belongsToMany('Livit\Build\Models\Post', 'post_tag_pivot');
+        return $this->belongsToMany('Eurobob\Construct\Models\Post', 'post_tag_pivot');
       }
 
       /**

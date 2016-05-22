@@ -1,6 +1,6 @@
 <?php 
 
-namespace Livit\Build\Facades;
+namespace Eurobob\Construct\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

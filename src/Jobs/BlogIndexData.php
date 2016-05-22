@@ -1,9 +1,9 @@
 <?php
 
-namespace Livit\Build\Jobs;
+namespace Eurobob\Construct\Jobs;
 
-use Livit\Build\Models\Post;
-use Livit\Build\Models\Tag;
+use Eurobob\Construct\Models\Post;
+use Eurobob\Construct\Models\Tag;
 use App\Jobs\Job;
 use Carbon\Carbon;
 use Illuminate\Contracts\Bus\SelfHandling;

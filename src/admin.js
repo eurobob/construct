@@ -14,8 +14,8 @@ let appComponents = {}
 
 let appEvents = {}
 
-// Import Livit\Build data, components & events
-import { lbData, lbEvents, lbComponents } from '../../../vendor/livit/build/src/assets/js/admin.js'
+// Import Eurobob\Construct data, components & events
+import { lbData, lbEvents, lbComponents } from '../../../vendor/eurobob/construct/src/assets/js/admin.js'
 
 // Merge objects
 const data = Object.assign({}, appData, lbData)

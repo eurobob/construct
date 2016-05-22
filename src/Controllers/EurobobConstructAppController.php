@@ -1,8 +1,8 @@
 <?php
 
-namespace Livit\Build\Controllers;
+namespace Eurobob\Construct\Controllers;
 
-trait LivitBuildAppController
+trait EurobobConstructAppController
 {
 
     protected $user;

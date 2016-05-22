@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\Models;
+namespace Eurobob\Construct\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

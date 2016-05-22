@@ -1,6 +1,6 @@
 <?php
 
-namespace Livit\Build\Requests;
+namespace Eurobob\Construct\Requests;
 
 use App\Http\Requests\Request;
 

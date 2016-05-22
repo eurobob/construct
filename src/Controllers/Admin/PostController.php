@@ -1,13 +1,13 @@
 <?php
 
-namespace Livit\Build\Controllers\Admin;
+namespace Eurobob\Construct\Controllers\Admin;
 
-use Livit\Build\Jobs\PostFormFields;
-use Livit\Build\Requests;
-use Livit\Build\Requests\PostCreateRequest;
-use Livit\Build\Requests\PostUpdateRequest;
+use Eurobob\Construct\Jobs\PostFormFields;
+use Eurobob\Construct\Requests;
+use Eurobob\Construct\Requests\PostCreateRequest;
+use Eurobob\Construct\Requests\PostUpdateRequest;
 use App\Http\Controllers\Controller;
-use Livit\Build\Models\Post;
+use Eurobob\Construct\Models\Post;
 
 class PostController extends Controller
 {

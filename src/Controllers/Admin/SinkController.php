@@ -1,9 +1,9 @@
 <?php
 
-namespace Livit\Build\Controllers\Admin;
+namespace Eurobob\Construct\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Livit\Build\Requests;
+use Eurobob\Construct\Requests;
 use App\Http\Controllers\Controller;
 
 class SinkController extends Controller
