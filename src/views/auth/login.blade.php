@@ -1,4 +1,4 @@
-@extends('build::admin.layout')
+@extends('construct::admin.layout')
 
 @section('content')
   <div class="container-fluid">
@@ -8,7 +8,7 @@
           <div class="panel-heading">Login</div>
           <div class="panel-body">
 
-            @include('build::admin.partials.errors')
+            @include('construct::admin.partials.errors')
 
             <form class="form-horizontal" role="form" method="POST"
                   action="{{ url('/login') }}">

@@ -16,7 +16,7 @@ class ContactController extends AppController
 
     public function showForm()
     {
-        return view('build::pages.contact.index');
+        return view('construct::pages.contact.index');
     }
 
     /**
@@ -30,7 +30,7 @@ class ContactController extends AppController
         $data = $request->only('name', 'email', 'phone');
         $data['messageLines'] = explode("\n", $request->get('message'));
 
-        Mail::send('build::includes.emails.contact', $data, function($message) use ($data) {
+        Mail::send('construct::includes.emails.contact', $data, function($message) use ($data) {
             $message->subject('Blog Contact Form: '.$data['name'])
                     ->to(config('site.contact_email'))
                     ->replyTo($data['email']);

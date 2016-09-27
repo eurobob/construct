@@ -11,6 +11,6 @@ class SinkController extends Controller
 
     public function index()
     {
-        return view('build::admin.sink.index');
+        return view('construct::admin.sink.index');
     }
 }

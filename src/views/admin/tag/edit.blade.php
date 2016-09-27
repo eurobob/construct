@@ -1,4 +1,4 @@
-@extends('build::admin.layout')
+@extends('construct::admin.layout')
 
 @section('content')
   <div class="container-fluid">
@@ -16,8 +16,8 @@
           </div>
           <div class="panel-body">
 
-            @include('build::admin.partials.errors')
-            @include('build::admin.partials.success')
+            @include('construct::admin.partials.errors')
+            @include('construct::admin.partials.success')
 
             <form class="form-horizontal" role="form" method="POST"
                   action="/admin/tag/{{ $id }}">
@@ -32,7 +32,7 @@
                 </div>
               </div>
 
-              @include('build::admin.tag._form')
+              @include('construct::admin.tag._form')
 
               <div class="form-group">
                 <div class="col-md-7 col-md-offset-3">

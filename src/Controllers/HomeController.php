@@ -9,6 +9,6 @@ class HomeController extends AppController
     public function index()
     {
         $this->pageRepository->findByName('home');
-        return view('build::pages.home.index');
+        return view('construct::pages.home.index');
     }
 }

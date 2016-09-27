@@ -16,7 +16,7 @@ class EurobobConstructServiceProvider extends ServiceProvider
     {
         parent::boot($router);
 
-        $this->loadViewsFrom(__DIR__.'/views', 'build');
+        $this->loadViewsFrom(__DIR__.'/views', 'construct');
 
         $this->publishes([
             __DIR__.'/AppController.php' => base_path('app/Http/Controllers/AppController.php'),

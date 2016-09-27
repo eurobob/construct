@@ -1,4 +1,4 @@
-@extends('build::layouts.master')
+@extends('construct::layouts.master')
 
 
 @section('content')

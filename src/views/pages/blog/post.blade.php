@@ -1,4 +1,4 @@
-@extends('build::layouts.master', [
+@extends('construct::layouts.master', [
   'title' => $post->title,
   'meta_description' => $post->meta_description ?: config('site.description'),
 ])

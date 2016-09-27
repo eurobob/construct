@@ -1,4 +1,4 @@
-@extends('build::layouts.master', ['meta_description' => 'Contact Form'])
+@extends('construct::layouts.master', ['meta_description' => 'Contact Form'])
 
 @section('content')
 

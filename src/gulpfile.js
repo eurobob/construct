@@ -32,12 +32,12 @@ elixir(function(mix) {
     mix.gulpicon();
 
     mix.imagemin("resources/assets/images", "public/build/assets/images/");
-    
+
     mix.sass('app.scss', 'public/css/app.css')
         .sass('ie.scss', 'public/css/ie.css');
 
-    mix.browserify('../vendor/build/js/admin.js');
-        
+    mix.browserify('../vendor/construct/js/admin.js');
+
     mix.modernizr([
             "resources/views/**/*.php",
             "public/css/app.css",

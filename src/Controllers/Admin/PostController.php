@@ -18,7 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('build::admin.post.index')
+        return view('construct::admin.post.index')
             ->withPosts(Post::all());
     }
 
@@ -31,7 +31,7 @@ class PostController extends Controller
     {
         $data = $this->dispatch(new PostFormFields());
 
-        return view('build::admin.post.create', $data);
+        return view('construct::admin.post.create', $data);
     }
 
     /**
@@ -71,7 +71,7 @@ class PostController extends Controller
     {
         $data = $this->dispatch(new PostFormFields($id));
 
-        return view('build::admin.post.edit', $data);
+        return view('construct::admin.post.edit', $data);
     }
 
     /**

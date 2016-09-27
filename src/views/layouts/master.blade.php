@@ -44,16 +44,16 @@
 @if ($isAdmin)
   <div class="admin" id="app">
     <div class="admin__bar">
-      @include('build::admin.partials.navbar')
+      @include('construct::admin.partials.navbar')
     </div>
     <div class="admin__site">
 @endif
 
-@include('build::includes.partials.page-nav')
+@include('construct::includes.partials.page-nav')
 
-@include('build::includes.partials.page-main')
+@include('construct::includes.partials.page-main')
 
-@include('build::includes.partials.page-footer')
+@include('construct::includes.partials.page-footer')
 
 @if ($isAdmin)
   <!-- Close admin -->
